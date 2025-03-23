@@ -1,0 +1,47 @@
+@use "../util/mixins" as u;
+@use "../global/variables" as v;
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 100%;
+  height: 3rem;
+
+  font-size: 1.1rem;
+  background: v.$background1;
+  color: #fff;
+  font-family: v.$font-main;
+  letter-spacing: 0.04rem;
+
+  transition: all 0.3s ease-in;
+
+  .navbar-brand {
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .navbar-links {
+    @include u.flex-center;
+  }
+  .nav-link {
+    margin: 0rem 1rem;
+    transition: color 0.3s ease;
+    letter-spacing: 0.04em;
+    &:hover {
+      color: v.$black;
+    }
+  }
+  .navbar-login:hover {
+    border-bottom: 2px solid v.$black;
+    color: v.$black;
+  }
+}
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none !important;
+  }
+}

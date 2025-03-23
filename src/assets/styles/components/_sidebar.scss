@@ -1,0 +1,29 @@
+@use "../global/variables" as v;
+.menu-item {
+  padding-left: 45px;
+  padding-top: 25px;
+  font-family: v.$font-submain;
+
+  &-div {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+  }
+}
+
+.sideBar-container {
+  h2 {
+    margin-top: 3rem;
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 500;
+    font-family: v.$font-main;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+}

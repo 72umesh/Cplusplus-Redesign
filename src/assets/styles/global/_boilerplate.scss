@@ -1,0 +1,40 @@
+@use "./variables" as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Gidole&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  scroll-behavior: smooth;
+}
+a {
+  color: unset;
+  text-decoration: none;
+}
+body {
+  background: v.$background2;
+}
+
+.page-title {
+  font-size: 1.7rem;
+  font-family: v.$font-main;
+  letter-spacing: 0.06rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.4rem 0;
+
+  color: #fff;
+  background-color: v.$medium-gray;
+}
+.main-content {
+  display: flex;
+
+  &-left {
+    width: 25%;
+  }
+  &-right {
+    width: 75%;
+  }
+}

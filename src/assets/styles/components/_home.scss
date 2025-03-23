@@ -1,0 +1,42 @@
+@use "../global/variables" as v;
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+
+  margin-top: 3rem;
+  padding: 1rem 2rem;
+
+  &-containers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 0.4rem;
+
+    .title {
+      font-size: 1.2rem;
+      text-align: center;
+      letter-spacing: 0.05rem;
+      font-family: v.$font-main;
+      font-weight: 500;
+      color: #4b70f5;
+    }
+    p {
+      letter-spacing: 0.04rem;
+      font-family: v.$font-submain;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .home-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+}

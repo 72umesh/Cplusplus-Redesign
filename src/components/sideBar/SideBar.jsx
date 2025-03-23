@@ -9,21 +9,21 @@ function SideBar() {
   return (
     <div>
       <div className="sideBar">
-        <div className="sideBar-container overlay ">
+        <div className="sideBar-container">
           <h2>C++</h2>
           {<MenuList menu={sideData} />}
         </div>
       </div>
-      {/* <div className="sideBar">
+      <div className="sideBar-smallscreens">
         <GiHamburgerMenu
           fontSize={24}
           onClick={() => setToggleMenu(true)}
           className="hamburger-icon"
         />
         {toggleMenu && (
-          <div className="sideBar-container overlay ">
+          <div className="sideBar-container overlay slide-left ">
             <FaTimes
-              fontSize={24}
+              fontSize={22}
               onClick={() => setToggleMenu(false)}
               className="overlay-close"
             />
@@ -31,7 +31,7 @@ function SideBar() {
             {<MenuList menu={sideData} />}
           </div>
         )}
-      </div> */}
+      </div>
     </div>
   );
 }

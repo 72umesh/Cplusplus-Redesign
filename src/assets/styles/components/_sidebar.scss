@@ -1,4 +1,8 @@
 @use "../global/variables" as v;
+
+.sideBar-smallscreens {
+  display: none;
+}
 .menu-item {
   padding-left: 45px;
   padding-top: 25px;
@@ -20,10 +24,56 @@
     font-family: v.$font-main;
   }
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 35%;
+  height: 100vh;
+  z-index: 10;
+  text-align: center;
+  background: v.$background1;
+  margin-top: 3rem;
+}
+.overlay-close {
+  font-size: 27px;
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  left: 2rem;
+}
 
+.slide-left {
+  animation: slide-left 0.2s ease;
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 @media (max-width: 768px) {
   .menu-item {
     padding-left: 15px;
     padding-top: 15px;
+  }
+}
+@media (max-width: 900px) {
+  .sideBar {
+    display: none;
+  }
+  .sideBar-smallscreens {
+    display: flex;
+
+    .hamburger-icon {
+      position: absolute;
+      top: 0.5rem;
+      left: 2rem;
+    }
   }
 }

@@ -38,3 +38,13 @@ body {
     width: 75%;
   }
 }
+@media (max-width: 900px) {
+  .main-content {
+    &-left {
+      position: absolute;
+    }
+    &-right {
+      width: 100%;
+    }
+  }
+}
